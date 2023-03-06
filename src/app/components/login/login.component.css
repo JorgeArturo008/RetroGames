@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://wallpapersmug.com/download/1366x768/d0155e/bridge-cityscape-pixel-art.jpg');
+    height: 100%;
+}
+
+.logInImg {
+    background-color: bisque;
+    height: 50%;
+    width: 25%;
+}
