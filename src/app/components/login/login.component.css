@@ -1,13 +1,36 @@
 .wrapper {
+    background-image: url('https://www.todofondos.net/wp-content/uploads/3840x2160-Lo-Fi-Wallpaper-scaled.jpg');
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://wallpapersmug.com/download/1366x768/d0155e/bridge-cityscape-pixel-art.jpg');
-    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.logInImg {
-    background-color: bisque;
-    height: 50%;
-    width: 25%;
+.logInbk {
+    background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+    height: 65%;
+    width: 40%;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dotted;
+}
+
+.textlog {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textlog2 {
+    margin-top: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
