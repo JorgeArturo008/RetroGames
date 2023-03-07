@@ -7,6 +7,13 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { RecuperarPComponent } from './components/recuperar-p/recuperar-p.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+
+
 
 @NgModule({
   declarations: [
@@ -14,11 +21,14 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     LoginComponent,
     DashboardComponent,
     RegistrarUsuarioComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    RecuperarPComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

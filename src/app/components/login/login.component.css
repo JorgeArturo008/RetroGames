@@ -22,6 +22,7 @@
 }
 
 .textlog {
+    color: white;
     margin-top: 2%;
     display: flex;
     align-items: center;
@@ -29,6 +30,7 @@
 }
 
 .textlog2 {
+    color: white;
     margin-top: 2.5%;
     display: flex;
     align-items: center;
