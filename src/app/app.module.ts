@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { environment } from '../environments/environment';
     DashboardComponent,
     RegistrarUsuarioComponent,
     SpinnerComponent,
-    RecuperarPComponent
+    RecuperarPComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,3 +36,4 @@ import { environment } from '../environments/environment';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

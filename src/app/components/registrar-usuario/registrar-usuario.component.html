@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="logInbk">
+    <div class="logInbk" *ngIf="!loading">
         <br>
         <img height="200" style="margin-left: 27%;" src="../../../assets/img/register.png">
         <br>
@@ -9,25 +9,32 @@
             <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
                 <div class="mb-3">
 
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
                     <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div style="color: aliceblue;" class="form-text">No debes compartir el correo con Extraños.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                     <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
                     <input type="password" formControlName="repetirPassword" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label class="form-check-label" for="exampleCheck1">Mantenerme al tanto</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <button type="submit" style="background-color: rgb(46, 163, 192);" class="btn btn-primary">Registrarse</button>
+                <div style="margin-left: 110%;">
+                    <a routerLink="/login" class="link-light">Atras</a>
+                </div>
             </form>
         </div>
+        <app-spinner *ngIf="loading"></app-spinner>
+
+
+
 
     </div>
 </div>
