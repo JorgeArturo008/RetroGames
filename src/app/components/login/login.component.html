@@ -6,26 +6,29 @@
         <img height="200" style="margin-left: 35%;" src="../../../assets/img/entrada.png">
         <h1 class="textlog">Bienvenido!</h1>
         <br>
-        <form>
+        <form (ngSubmit)="login()" [formGroup]="loginusuario">
             <div class="row">
                 <div class="col" style="margin-left: 3%;">
 
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text" formControlName="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="col" style="margin-right: 3%;">
-                    <input type="text" class="form-control" placeholder="Password">
+                    <input type="text" formControlName="password" class="form-control" placeholder="Password">
                 </div>
+            </div>
+            <br>
+
+            <br>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button style="background-color: rgb(46, 163, 192);" class="btn btn-primary" type="submit">¡Acceder</button>
             </div>
 
 
         </form>
-        <br>
 
-        <br>
 
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <button style="background-color: rgb(46, 163, 192);" class="btn btn-primary" type="button">¡Acceder</button>
-        </div>
+
         <br>
         <br>
 

@@ -8,10 +8,10 @@
 
         <h2 class="textlog">Recuperar Contraseña</h2>
         <div class="textlog">
-            <form>
+            <form (ngSubmit)="reset()" [formGroup]="recuperarUsuario">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Ingresa el Correo Electronico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input formControlName="email" type="email" class="form-control">
                     <div style="color: aliceblue;" class="form-text">No debes compartir el correo con Extraños.</div>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar Email</button>

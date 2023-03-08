@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { FirebaseErrorCodeService } from 'src/app/Services/firebase-error-code.service';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -16,7 +17,8 @@ export class RegistrarUsuarioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private afAuth: AngularFireAuth,
-    private router: Router
+    private router: Router,
+    private firebaseError: FirebaseErrorCodeService
   ) {
     this.registrarUsuario = this.fb.group({
       email: ['', Validators.required],
@@ -55,7 +57,7 @@ export class RegistrarUsuarioComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: this.firebaseError(error.code),
+          text: this.firebaseError.firebaseError(error.code),
           footer: '<a href="">Porque esta sucediendo este error?</a>',
         });
 
@@ -63,16 +65,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       });
   }
 
-  firebaseError(code: string) {
-    switch (code) {
-      case 'auth/email-already-in-use':
-        return 'El Correo Electronico ya Existe, Intente con Otro.';
-      case 'auth/weak-password':
-        return 'La Contraseña es muy Corta, ingresa una contraseña mas segura.';
-      default:
-        return 'Error Desconocido, Recargue la pagina y intentelo de Nuevo.';
-    }
-  }
+  
 
   ngOnInit(): void {}
 }
