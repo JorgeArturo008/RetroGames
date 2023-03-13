@@ -12,7 +12,8 @@
 }
 
 .logInbk {
-    background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+    background: transparent;
+    backdrop-filter: blur(10px);
     height: 65%;
     width: 25%;
     border-radius: 15px;
@@ -27,4 +28,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.textLink {
+    color: white;
+    float: right;
+    margin-right: 10%;
+    margin-top: 15%;
+}
+
+.icontext {
+    color: white;
+    float: left;
+    margin-top: 4%;
 }

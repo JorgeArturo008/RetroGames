@@ -34,7 +34,7 @@ export class RegistrarUsuarioComponent implements OnInit {
 
     if (password != repetirPassword) {
       Swal.fire({
-        icon: 'error',
+        imageUrl: 'https://i.gifer.com/origin/5a/5a627019f4c81dcdd1497651e611e686.gif',
         title: 'Oops...',
         text: '¡La contraseña debe de ser la misma en los dos campos!',
         footer: '<a href="">Porque esta sucediendo este error?</a>',
@@ -55,7 +55,7 @@ export class RegistrarUsuarioComponent implements OnInit {
         
 
         Swal.fire({
-          icon: 'error',
+          imageUrl: 'https://i.gifer.com/origin/5a/5a627019f4c81dcdd1497651e611e686.gif',
           title: 'Oops...',
           text: this.firebaseError.firebaseError(error.code),
           footer: '<a href="">Porque esta sucediendo este error?</a>',

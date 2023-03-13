@@ -50,7 +50,7 @@ export class RecuperarPComponent implements OnInit {
     })
     .catch((error) => {
       Swal.fire({
-        icon: 'error',
+        imageUrl: 'https://i.gifer.com/origin/5a/5a627019f4c81dcdd1497651e611e686.gif',
         title: 'Oops...',
         text: this.firebaseError.firebaseError(error.code),
         footer: '<a href="">Porque esta sucediendo este error?</a>',

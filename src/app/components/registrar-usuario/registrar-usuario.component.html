@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div class="logInbk" *ngIf="!loading">
         <br>
-        <img height="200" style="margin-left: 27%;" src="../../../assets/img/register.png">
+        <img height="200" style="margin-left: 30%;" src="../../../assets/img/6C5T.gif">
         <br>
 
         <h2 class="textlog">Creacion de un Nuevo Usuario</h2>
@@ -25,16 +25,19 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Mantenerme al tanto</label>
                 </div>
-                <button type="submit" style="background-color: rgb(46, 163, 192);" class="btn btn-primary">Registrarse</button>
-                <div style="margin-left: 110%;">
-                    <a routerLink="/login" class="link-light">Atras</a>
-                </div>
+                <button type="submit" style="background-color: rgb(46, 163, 192);" class="btn btn-primary"> Registrarse <ion-icon ios="ios-person-add" md="md-person-add" class="icontext"></ion-icon> </button>
+
             </form>
+
         </div>
+
+
+
         <app-spinner *ngIf="loading"></app-spinner>
 
 
 
-
+        <a routerLink="/login" class="textLink">
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="icontext"></ion-icon>Atras</a>
     </div>
 </div>
