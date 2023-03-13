@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -30,7 +31,8 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

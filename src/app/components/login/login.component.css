@@ -12,13 +12,14 @@
 }
 
 .logInbk {
-    background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+    background: transparent;
     height: 65%;
     width: 40%;
     border-radius: 15px;
     border-color: aliceblue;
     border-width: 1px;
-    border-style: dotted;
+    border-style: solid;
+    backdrop-filter: blur(10px);
 }
 
 .textlog {
@@ -35,4 +36,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.textlog3 {
+    color: white;
+    margin-top: 10%;
+}
+
+.textlog4 {
+    margin-left: 10%;
+}
+
+.textlog5 {
+    color: white;
+    margin-top: 4%;
 }

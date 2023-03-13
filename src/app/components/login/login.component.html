@@ -3,41 +3,63 @@
 
     <div class=" logInbk">
         <br>
-        <img height="200" style="margin-left: 35%;" src="../../../assets/img/entrada.png">
-        <h1 class="textlog">Bienvenido!</h1>
+        <img height="200" style="margin-left: 37.5%;" src="../../../assets/img/gaming.png">
+        <h1 class="textlog">Bienvenido a RetroGames!</h1>
         <br>
+
+
+        <div class="row g-3 align-items-center" style="margin-left: 15%;">
+            <div class="col-auto">
+                <ion-icon class="textlog3" ios="ios-mail-outline" md="md-mail"></ion-icon>
+            </div>
+            <div class="col-auto">
+                <h5 class="textlog3">Email</h5>
+            </div>
+
+
+            <div class="col-auto" style="margin-left: 40%;">
+                <ion-icon class="textlog3" ios="ios-lock-outline" md="md-lock"></ion-icon>
+            </div>
+            <div class="col-auto">
+                <h5 class="textlog3">Password</h5>
+            </div>
+
+
+        </div>
+
         <form (ngSubmit)="login()" [formGroup]="loginusuario">
-            <div class="row">
-                <div class="col" style="margin-left: 3%;">
-
-                    <input type="text" formControlName="email" class="form-control" placeholder="Email">
+            <div class="row g-3 align-items-center" style="margin-left: 2.5%;">
+                <div class="col-auto">
+                    <input type="text" formControlName="email" class="form-control" placeholder="@example.com" style="width: 175%;;">
                 </div>
-                <div class="col" style="margin-right: 3%;">
-                    <input type="text" formControlName="password" class="form-control" placeholder="Password">
+
+
+                <div class="col-auto" style="margin-left: 20%;">
+                    <input type="password" formControlName="password" class="form-control" placeholder="Secret" style="width: 175%;;">
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 5%;">
+                    <button style="background-color: rgb(46, 163, 192);" class="btn btn-primary" type="submit">¡Acceder a RetroGames!</button>
                 </div>
             </div>
-            <br>
-
-            <br>
-
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button style="background-color: rgb(46, 163, 192);" class="btn btn-primary" type="submit">¡Acceder</button>
-            </div>
-
-
         </form>
 
 
 
-        <br>
+
+
+
         <br>
 
         <div style="margin-right: 4%;" class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-            <button routerLink="/registrar-usuario" style="background-color: rgb(46, 163, 192);" class="btn btn-primary me-md-2" type="button">Registrarse</button>
-            <button routerLink="/recuperar-p" style="background-color: rgb(46, 163, 192);" class="btn btn-primary me-md-2" type="button">Recuperar Contraseña</button>
+            <button routerLink="/registrar-usuario" style="background-color: rgb(46, 163, 192);" class="btn btn-primary me-md-2" type="button"> <ion-icon ios="ios-add-circle" md="md-add-circle" ></ion-icon>  Registrarse </button>
+            <button routerLink="/recuperar-p" style="background-color: rgb(46, 163, 192);" class="btn btn-primary me-md-2" type="button"> <ion-icon ios="ios-key" md="md-key"></ion-icon> Recuperar Contraseña</button>
         </div>
 
-        <h6 class="textlog2">@Se reserva el derecho de Admision 2023</h6>
+
+
+        <h6 class="textlog2" style="margin-top: 4%;">@Se reserva el derecho de Admision 2023</h6>
     </div>
+
 </div>
