@@ -35,18 +35,14 @@ export class LoginComponent implements OnInit {
     this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Bienvenido A RetroGames!',
-          showConfirmButton: false,
-          timer: 1500
-        })
+
+        
+        
         this.router.navigate(['/dashboard']);
       })
       .catch((error) => {
         Swal.fire({
-          imageUrl: 'https://i.gifer.com/origin/5a/5a627019f4c81dcdd1497651e611e686.gif',
+          icon: 'error',
           title: 'Oops...',
           text: this.firebaseError.firebaseError(error.code),
           footer: '<a href="">Porque esta sucediendo este error?</a>',
