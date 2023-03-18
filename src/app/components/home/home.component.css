@@ -1,0 +1,156 @@
+.background1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.hdqwalls.com/download/sherift-retro-road-4k-06-1366x768.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.InitialPag {
+    margin-top: 30px;
+    margin-left: 300px;
+    backdrop-filter: blur(8px);
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    width: 83%;
+    height: 80%;
+}
+
+.divimg {
+    margin-top: 17px;
+    margin-left: 17px;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    float: left;
+    width: 30%;
+    height: 50%;
+    backdrop-filter: blur(15px);
+    background-color: transparent;
+    background-image: url("https://64.media.tumblr.com/cc4e63aa4626f7ae6a05cbc59d08d9a2/tumblr_mtdwydfu2x1s5jjtzo1_500.gif");
+}
+
+.divimg2 {
+    margin-top: 380px;
+    margin-left: 15px;
+    width: 95%;
+    height: 15%;
+    background-color: transparent;
+}
+
+.divinfo {
+    float: center;
+    margin-top: 17px;
+    margin-left: 540px;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    width: 65%;
+    height: 95%;
+    backdrop-filter: blur(15px);
+    background-color: transparent;
+}
+
+.divimgInfo {
+    float: right;
+    width: 30%;
+    height: 50%;
+    background-color: transparent;
+    background-image: url("https://i.gifer.com/origin/d5/d5b88b45655b89b33ff6d1dc2df982ff_w200.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.TextDivInfo1 {
+    margin-top: 30px;
+    font-size: 45px;
+    font-family: Georgia, serif;
+    color: white;
+    margin-left: 45px;
+}
+
+.TextDivInfo2 {
+    font-size: 28px;
+    font-family: Georgia, serif;
+    color: white;
+    margin-left: 60px;
+}
+
+.TextDivInfo3 {
+    font-size: 22px;
+    font-family: Georgia, serif;
+    color: white;
+    margin-left: 70px;
+}
+
+.TextDivInfo4 {
+    font-size: 18px;
+    font-family: Georgia, serif;
+    color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.Cardinfo {
+    margin-top: 10px;
+    height: 200px;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dashed;
+    font-family: Georgia, serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMbnBjge0PtUAYr6NZdp0FRaKo7b3O87CB3Q&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Cardinfo2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 200px;
+    width: 500px;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dashed;
+    font-family: Georgia, serif;
+    background-image: url("https://t3.ftcdn.net/jpg/02/39/40/08/360_F_239400826_YQExbFZM7u7yesAAnEyZb8QauJu22MWQ.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-bodyinfo {
+    color: aliceblue;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+}
+
+.card-bodyinfo2 {
+    color: aliceblue;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 17px;
+    align-items: center;
+}
+
+.Textimg {
+    margin-top: 140px;
+    font-size: 30px;
+    font-family: Georgia, serif;
+    color: lightgrey;
+    margin-left: 30px;
+}

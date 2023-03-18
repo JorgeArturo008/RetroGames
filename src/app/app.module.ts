@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { IonicModule } from '@ionic/angular';
+import { HomeComponent } from './components/home/home.component';
+import { InformacionComponent } from './components/informacion/informacion.component';
 
 
 
@@ -25,6 +27,8 @@ import { IonicModule } from '@ionic/angular';
     RegistrarUsuarioComponent,
     SpinnerComponent,
     RecuperarPComponent,
+    HomeComponent,
+    InformacionComponent,
     
   ],
   imports: [

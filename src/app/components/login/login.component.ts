@@ -32,14 +32,19 @@ export class LoginComponent implements OnInit {
     const email = this.loginusuario.value.email;
     const password = this.loginusuario.value.password;
 
-    this.afAuth
+     this.afAuth
       .signInWithEmailAndPassword(email, password)
-      .then((user) => {
+      .then( async (user) => {
 
-        
-        
-        this.router.navigate(['/dashboard']);
-      })
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: "hey",
+          footer: '<a href="">Porque esta sucediendo este error?</a>',
+          backdrop: false
+        });
+
+        this.router.navigate(['/home']);})
       .catch((error) => {
         Swal.fire({
           icon: 'error',
