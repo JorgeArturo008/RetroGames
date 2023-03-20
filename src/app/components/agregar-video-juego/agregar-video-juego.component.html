@@ -21,47 +21,53 @@
 
                     <img src="https://thumbs.gfycat.com/FlickeringShabbyAnemone-max-1mb.gif" style="margin-left: 80px;" width="320px" height="230px">
 
-                    <form action="">
-                        <div class="container mt-5">
+                    <form [formGroup]="videogameForm" (ngSubmit)="agregarvideogame()">
+                        <div class="container mt-1">
 
                             <div class="mb-3 row ">
                                 <label class="col-sm-2 col-form-label titulo">Nombre</label>
-                                <div class="col-sm-7   ">
-                                    <input type="text" class="form-control " placeholder="VideoJuego Nuevo">
+                                <div class="col-sm-5   ">
+                                    <input type="text" class="form-control " formControlName="Nombre" placeholder="VideoJuego Nuevo">
+                                </div>
+                                <div class="text-danger" *ngIf="videogameForm.get('Nombre')?.hasError('required') && videogameForm.get('Nombre')?.touched">
+                                    <span>El nombre del VideoJuego <strong>es obligatorio!</strong></span>
                                 </div>
                             </div>
 
                             <div class="mb-3 row mt-3">
                                 <label class="col-sm-2 col-form-label titulo">Url</label>
-                                <div class="col-sm-7   ">
-                                    <input type="text" class="form-control " placeholder="Url de la imagen">
+                                <div class="col-sm-5   ">
+                                    <input type="text" class="form-control " formControlName="Url" placeholder="Url de la imagen">
+                                </div>
+                                <div class="text-danger" *ngIf="videogameForm.get('Url')?.hasError('required') && videogameForm.get('Url')?.touched">
+                                    <span>La Url del VideoJuego <strong>es obligatoria!</strong></span>
                                 </div>
                             </div>
 
                             <div class="mb-3 row mt-3">
                                 <label class="col-sm-2 col-form-label titulo">Year</label>
-                                <div class="col-sm-7   ">
-                                    <input type="number" class="form-control " placeholder="Año de publicacion">
+                                <div class="col-sm-3  ">
+                                    <input type="number" class="form-control " formControlName="year" placeholder="Año de publicacion">
                                 </div>
                             </div>
 
                             <div class="mb-3 row mt-3 ">
                                 <label class="col-sm-2 col-form-label titulo">Productora</label>
-                                <div class="col-sm-7   ">
-                                    <input type="text" class="form-control " placeholder="Empresa">
+                                <div class="col-sm-5   ">
+                                    <input type="text" class="form-control " formControlName="productora" placeholder="Empresa">
                                 </div>
                             </div>
 
                             <div class="mb-3 row mt-3 ">
                                 <label class="col-sm-2 col-form-label titulo">Descripcion</label>
-                                <div class="col-sm-7   ">
-                                    <textarea class="form-control" maxlength="100" rows="1" placeholder="Breve Descrpcion (Max-100)"></textarea>
+                                <div class="col-sm-5  ">
+                                    <textarea formControlName="Descrpcion" class="form-control" maxlength="100" rows="1" placeholder="Breve Descrpcion (Max-100)"></textarea>
                                 </div>
                             </div>
 
                             <div>
 
-                                <button class="btn btn-success float-end mb-3">Crear nuevo VideoJuego</button>
+                                <button class="btn btn-success float-end mb-3" type="submit">Crear nuevo VideoJuego</button>
                                 <button routerLink="/lista-video-juegos" class="btn btn-success float-start mb-3">Atras</button>
                             </div>
 

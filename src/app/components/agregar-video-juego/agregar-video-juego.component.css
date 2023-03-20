@@ -47,3 +47,9 @@
     font-family: Georgia, serif;
     color: aliceblue;
 }
+
+.text-danger {
+    text-align: start;
+    margin-left: 180px;
+    font-family: Georgia, serif;
+}

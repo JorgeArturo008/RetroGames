@@ -42,7 +42,8 @@ import { ListaVideoJuegosComponent } from './components/lista-video-juegos/lista
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

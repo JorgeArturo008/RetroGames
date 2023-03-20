@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
           title: 'Oops...',
           text: this.firebaseError.firebaseError(error.code),
           footer: '<a href="">Porque esta sucediendo este error?</a>',
+          backdrop: false
         });
       });
   }
