@@ -15,6 +15,9 @@ import { environment } from '../environments/environment';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
 import { InformacionComponent } from './components/informacion/informacion.component';
+import { AgregarVideoJuegoComponent } from './components/agregar-video-juego/agregar-video-juego.component';
+import { EditarVideoJuegoComponent } from './components/editar-video-juego/editar-video-juego.component';
+import { ListaVideoJuegosComponent } from './components/lista-video-juegos/lista-video-juegos.component';
 
 
 
@@ -29,6 +32,9 @@ import { InformacionComponent } from './components/informacion/informacion.compo
     RecuperarPComponent,
     HomeComponent,
     InformacionComponent,
+    AgregarVideoJuegoComponent,
+    EditarVideoJuegoComponent,
+    ListaVideoJuegosComponent,
     
   ],
   imports: [

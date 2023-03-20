@@ -6,9 +6,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RecuperarPComponent } from './components/recuperar-p/recuperar-p.component';
 import { HomeComponent } from './components/home/home.component';
 import { InformacionComponent } from './components/informacion/informacion.component';
+import { AgregarVideoJuegoComponent } from './components/agregar-video-juego/agregar-video-juego.component'; 
+import { EditarVideoJuegoComponent } from './components/editar-video-juego/editar-video-juego.component';
+import { ListaVideoJuegosComponent } from './components/lista-video-juegos/lista-video-juegos.component';
 
 const routes: Routes = [ 
   {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'agregar-video-juego', component: AgregarVideoJuegoComponent},
+  {path: 'editar-video-juego/:id', component: EditarVideoJuegoComponent},
+  {path:'lista-video-juegos', component:ListaVideoJuegosComponent},
 { path: 'login', component: LoginComponent},
 {path: 'registrar-usuario', component: RegistrarUsuarioComponent},
 {path: 'dashboard', component: DashboardComponent},

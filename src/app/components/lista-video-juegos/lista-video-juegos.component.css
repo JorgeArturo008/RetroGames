@@ -1,0 +1,20 @@
+.background1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://rare-gallery.com/mocahbig/31335-DeLorean-Retro-Wave-Neon-Sunset-CarRetro-Wave-Neon.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.InitialPag {
+    margin-top: 30px;
+    margin-left: 300px;
+    backdrop-filter: blur(8px);
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    width: 83%;
+    height: 80%;
+}

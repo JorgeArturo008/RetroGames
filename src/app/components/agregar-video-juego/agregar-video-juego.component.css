@@ -1,0 +1,49 @@
+.background1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://rare-gallery.com/mocahbig/31335-DeLorean-Retro-Wave-Neon-Sunset-CarRetro-Wave-Neon.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.InitialPag {
+    background-image: url("https://basementrejects.com/wp-content/uploads/2015/03/nes-remix-wallpaper-background-classic-retro-gaming-wii-u-pack-2.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+    margin-left: 300px;
+    backdrop-filter: blur(8px);
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    width: 83%;
+    height: 80%;
+}
+
+.divinfo {
+    float: center;
+    margin-top: 17px;
+    margin-left: 540px;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: solid;
+    width: 65%;
+    height: 95%;
+    backdrop-filter: blur(15px);
+    background-color: transparent;
+}
+
+.divback {
+    border-radius: 15px;
+    height: 693px;
+    width: 1050px;
+}
+
+.titulo2 {
+    font-size: 2rem;
+    font-family: Georgia, serif;
+    color: aliceblue;
+}
