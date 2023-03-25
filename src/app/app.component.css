@@ -1,0 +1,16 @@
+@detalle {
+    selector: 'app-root',
+    template: ` <div *ngFor="let game of ListGames2 | keyvalue" class="card"><p> {
+        {
+            game.value
+        }
+    }
+    </p></div>
+}
+
+export class AppComponent {
+    ListGames2= {
+        Nombre: 'value1', prop2: 'value2'
+    }
+    ;
+}

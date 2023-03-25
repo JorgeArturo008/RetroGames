@@ -1,0 +1,37 @@
+<div class="background1">
+
+    <app-dashboard></app-dashboard>
+
+
+    <div *ngFor="let game of array" class="InitialPag">
+
+
+        <div class="divleft">
+            <img class="imgdetalle" src="{{game.Url}}" alt="">
+        </div>
+
+        <div class="divright">
+            <div class="divinfo0">
+                <div class="divtitulo">
+                    <p class="Titulodetalle">{{game.Nombre}}</p>
+                </div>
+                <div class="divDescripcion">
+                    <h3 style="color: aliceblue;">Descripcion:</h3>
+                    <p class="Descripciondetalle">{{game.Descripcion}}</p>
+
+
+                    <span class="yeardetalle"><ion-icon ios="ios-calendar" md="md-calendar" style="margin-right: 10px;"></ion-icon>Año de entrega: {{game.year}}</span><span class="productoradetalle"><ion-icon ios="ios-business" md="md-business" style="margin-right: 10px;"></ion-icon>Empresa: {{game.productora}}</span>
+
+                </div>
+
+                <span>
+
+                <button type="button" style="float: left; margin-left: 70px;" routerLink="/lista-video-juegos" class="btn btn-success"><ion-icon style="margin-right: 5px;" ios="ios-return-left" md="md-return-left"></ion-icon>Atras</button><button class="btn btn-primary" style=" margin-left: 300px;"><ion-icon style="margin-right: 5px;" ios="ios-information-circle" md="md-information-circle"></ion-icon>Editar</button> <button style=" margin-left: 10px;" class="btn btn-danger"><ion-icon style="margin-right: 5px;"ios="ios-trash" md="md-trash"></ion-icon>Borrar</button>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
       .then( async (user) => {
 
         Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
+          icon: 'success',
+          title: 'Ingresaste con Exito',
           text: "hey",
           footer: '<a href="">Porque esta sucediendo este error?</a>',
           backdrop: false

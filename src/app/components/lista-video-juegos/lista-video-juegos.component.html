@@ -5,27 +5,34 @@
     <div class="InitialPag">
 
         <div class="container mt-5 ">
-            <div class="row">
+            <div style="text-align: center;">
+                <span class="titulo">
+                Lista De Video Juegos Retro
+             </span>
 
+                <button routerLink="/agregar-video-juego" class="btn btn-success float-end">VideoJuego Nuevo</button>
+
+            </div>
+            <div class="row" style="margin-top: 20px;">
 
                 <div class="card-body text-center ">
 
-                    <span class="titulo">
-                              Lista De Video Juegos Retro
-                           </span>
 
-                    <button routerLink="/agregar-video-juego" class="btn btn-success float-end">VideoJuego Nuevo</button>
+                    <div class="row row-cols-2 row-cols-md-3 g-4">
 
+                        <div *ngFor="let games of ListGames" class="card mt-5 " style="width: 18rem; margin-left: 40px; background-image: url(''); ">
+                            <div class="col">
+                                <img src='{{ games.Url }}' class="imgCard" style="margin-top: 5px; " alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ games.Nombre }}</h5>
+                                    <p class="card-text">{{ games.productora }}</p>
+                                    <span><a [routerLink]="['/detalle', games._id ]" style="float: inline-start;" class="btn btn-success">Ver</a> <button [routerLink]="['/editar-video-juego', games._id ]" class="btn btn-primary" style=" margin-left: 85px;"><ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button> <button (click)="DeleteGame(games._id)" class="btn btn-danger" style="float: inline-end;"><ion-icon ios="ios-trash" md="md-trash"></ion-icon></button></span>
 
-                    <div class="card mt-5" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
 
                 </div>
 

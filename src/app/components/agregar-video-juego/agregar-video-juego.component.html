@@ -14,9 +14,7 @@
 
                 <div class="card-body text-center ">
 
-                    <span class="titulo2">
-                                  Agreguemos un Nuevo Video Juego!
-                               </span>
+                    <span class="titulo2">{{titulo}}</span>
 
 
                     <img src="https://thumbs.gfycat.com/FlickeringShabbyAnemone-max-1mb.gif" style="margin-left: 80px;" width="320px" height="230px">
@@ -59,16 +57,19 @@
                             </div>
 
                             <div class="mb-3 row mt-3 ">
+                                <span></span>
                                 <label class="col-sm-2 col-form-label titulo">Descripcion</label>
                                 <div class="col-sm-5  ">
-                                    <textarea formControlName="Descrpcion" class="form-control" maxlength="100" rows="1" placeholder="Breve Descrpcion (Max-100)"></textarea>
+                                    <textarea formControlName="Descrpcion" class="form-control" maxlength="1000" rows="1" placeholder="Breve Descrpcion (Max-100)"></textarea>
                                 </div>
                             </div>
 
                             <div>
-
-                                <button class="btn btn-success float-end mb-3" type="submit">Crear nuevo VideoJuego</button>
-                                <button routerLink="/lista-video-juegos" class="btn btn-success float-start mb-3">Atras</button>
+                                <span>
+                                <button style="margin-right: 15px;" routerLink="/lista-video-juegos" class="btn btn-success mb-3">Atras</button>
+                                <button style="margin-right: 100px;"class="btn btn-success mb-3"  type="submit">{{boton}}</button>
+                                
+                            </span>
                             </div>
 
 
