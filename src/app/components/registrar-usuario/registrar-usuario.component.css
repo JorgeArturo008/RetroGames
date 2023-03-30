@@ -14,8 +14,29 @@
 .logInbk {
     background: transparent;
     backdrop-filter: blur(10px);
+    height: 100%;
+    width: 35%;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dotted;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.loginRight {
+    border-radius: 15px;
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    width: 65%;
+}
+
+.logIninitialpg {
+    background: transparent;
+    backdrop-filter: blur(10px);
     height: 75%;
-    width: 25%;
+    width: 65%;
     border-radius: 15px;
     border-color: aliceblue;
     border-width: 1px;

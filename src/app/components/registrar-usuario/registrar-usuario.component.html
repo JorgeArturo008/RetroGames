@@ -1,43 +1,71 @@
 <div class="wrapper">
-    <div class="logInbk" *ngIf="!loading">
-        <br>
-        <img height="200" style="margin-left: 30%;" src="../../../assets/img/6C5T.gif">
-        <br>
 
-        <h2 class="textlog">Creacion de un Nuevo Usuario</h2>
-        <div class="textlog">
-            <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
-                <div class="mb-3">
+    <div class="logIninitialpg">
+        <div class="logInbk" *ngIf="!loading">
 
-                    <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div style="color: aliceblue;" class="form-text">No debes compartir el correo con Extraños.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
-                    <input type="password" formControlName="repetirPassword" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Mantenerme al tanto</label>
-                </div>
-                <button type="submit" style="background-color: rgb(46, 163, 192);" class="btn btn-primary"> Registrarse <ion-icon ios="ios-person-add" md="md-person-add" class="icontext"></ion-icon> </button>
+            <h2 class="textlog">Creacion de un Nuevo Usuario</h2>
+            <div class="textlog">
+                <form (ngSubmit)="registrar2()" [formGroup]="registrarUsuario">
 
-            </form>
+                    <div class="mb-3">
 
+                        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div style="color: aliceblue;" class="form-text">No debes compartir el correo con Extraños.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
+                        <input type="password" formControlName="repetirPassword" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Mantenerme al tanto</label>
+                    </div>
+                    <button type="submit" style="background-color: rgb(46, 163, 192);" class="btn btn-primary"> Registrarse <ion-icon ios="ios-person-add" md="md-person-add" class="icontext"></ion-icon> </button>
+
+                    <div class="loginRight">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Nombre</span>
+                            <input type="text" formControlName="Nombre" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">telefono</span>
+                            <input type="text" formControlName="Telefono" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">edad</span>
+                            <input type="text" formControlName="Edad" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">videojuegofav</span>
+                            <input type="text" formControlName="videojuegofav" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">urlfotoperfil</span>
+                            <input type="text" formControlName="urlfotoperfil" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <app-spinner *ngIf="loading"></app-spinner>
+
+            <a routerLink="/login" class="textLink">
+                <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="icontext"></ion-icon>Atras</a>
         </div>
 
 
 
-        <app-spinner *ngIf="loading"></app-spinner>
 
 
-
-        <a routerLink="/login" class="textLink">
-            <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="icontext"></ion-icon>Atras</a>
     </div>
 </div>

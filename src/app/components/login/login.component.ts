@@ -44,6 +44,8 @@ export class LoginComponent implements OnInit {
           backdrop: false
         });
 
+        console.log(user.user?.email) 
+
         this.router.navigate(['/home']);})
       .catch((error) => {
         Swal.fire({

@@ -9,9 +9,11 @@ import { InformacionComponent } from './components/informacion/informacion.compo
 import { AgregarVideoJuegoComponent } from './components/agregar-video-juego/agregar-video-juego.component'; 
 import { ListaVideoJuegosComponent } from './components/lista-video-juegos/lista-video-juegos.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { ListaVideoJuegoVerticalComponent } from './components/lista-video-juego-vertical/lista-video-juego-vertical.component';
 
 const routes: Routes = [ 
   {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'lista-video-juego-vertical', component: ListaVideoJuegoVerticalComponent},
   {path: 'agregar-video-juego', component: AgregarVideoJuegoComponent},
   {path: 'editar-video-juego/:id', component: AgregarVideoJuegoComponent},
   {path: 'detalle/:id', component: DetalleComponent},

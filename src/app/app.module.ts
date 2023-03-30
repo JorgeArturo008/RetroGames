@@ -18,7 +18,9 @@ import { InformacionComponent } from './components/informacion/informacion.compo
 import { AgregarVideoJuegoComponent } from './components/agregar-video-juego/agregar-video-juego.component';
 import { ListaVideoJuegosComponent } from './components/lista-video-juegos/lista-video-juegos.component';
 import {HttpClientModule} from '@angular/common/http';
-import { DetalleComponent } from './components/detalle/detalle.component'
+import { DetalleComponent } from './components/detalle/detalle.component';
+import { ListaVideoJuegoVerticalComponent } from './components/lista-video-juego-vertical/lista-video-juego-vertical.component'
+import { FirestoreModule } from '@angular/fire/firestore';
 
 
 
@@ -35,6 +37,7 @@ import { DetalleComponent } from './components/detalle/detalle.component'
     AgregarVideoJuegoComponent,
     ListaVideoJuegosComponent,
     DetalleComponent,
+    ListaVideoJuegoVerticalComponent,
     
   ],
   imports: [
@@ -43,7 +46,9 @@ import { DetalleComponent } from './components/detalle/detalle.component'
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     IonicModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule,
+    
     
   ],
   providers: [],

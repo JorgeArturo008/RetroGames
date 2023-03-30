@@ -22,7 +22,7 @@
     "@ionic/angular": "^6.6.1",
     "bootstrap": "^5.2.3",
     "console-browserify": "^1.2.0",
-    "firebase": "^9.17.2",
+    "firebase": "^9.18.0",
     "ionicons": "^4.6.3",
     "ngx-toastr": "^16.1.0",
     "rxjs": "~7.5.0",
