@@ -6,12 +6,14 @@ import { UserModel } from '../Models/ModelUser';
 import { collection } from 'firebase/firestore';
 import { DocumentReference, DocumentData } from '@firebase/firestore-types';
 import { filter } from 'rxjs/operators';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class FireStoreService {
+  
 
 
 
@@ -33,21 +35,7 @@ export class FireStoreService {
 
   }
 
-    getbyid(path:string, id:string){
     
-      this.firestores.collection('yourcollection').doc("documentid").ref.get().then(function (doc) {
-        if (doc.exists) {
-          console.log(doc.data());
-        } else {
-          console.log("There is no document!");
-        }
-      }).catch(function (error) {
-        console.log("There was an error getting your document:", error);
-      });
-    }
-  
 
 }
-
-  
 

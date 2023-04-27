@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { UserModel } from '../Models/ModelUser';
 import { getAuth, signInWithRedirect, signOut } from "firebase/auth";
 import {  onAuthStateChanged } from "firebase/auth";
+import { ReturnStatement } from '@angular/compiler';
 
 
 @Injectable({
@@ -32,6 +33,20 @@ export class AuthServicesService {
       // An error happened.
     });
   }
+
+  getuid(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      this.authfirebase.authState.subscribe(user => {
+        if (user) {
+          const uid = user.uid;
+          resolve(uid);
+        } else {
+          reject('No se ha encontrado el usuario.');
+        }
+      });
+    });
+  }
+
 
   
 }
