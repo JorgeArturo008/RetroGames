@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VideoJuego } from '../../Models/VideoJuego';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { GamesService } from 'src/app/Services/games.service';
 import { error } from 'console';
-import { isNull } from '@angular/compiler/src/output/output_ast';
+
 
 @Component({
   selector: 'app-agregar-video-juego',

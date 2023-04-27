@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2';
@@ -7,7 +7,8 @@ import { FirebaseErrorCodeService } from 'src/app/Services/firebase-error-code.s
 import { UserModel } from '../../Models/ModelUser';
 import { AuthServicesService } from '../../Services/auth-services.service';
 import { error } from 'console';
-import { FirestoreServiceService } from '../../Services/firestore-service.service';
+import { FireStoreService } from 'src/app/Services/fire-store.service';
+
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -25,7 +26,8 @@ export class RegistrarUsuarioComponent implements OnInit {
     private router: Router,
     private firebaseError: FirebaseErrorCodeService,
     private auth : AuthServicesService,
-    private firestore: FirestoreServiceService
+    @Inject(FireStoreService) private firestore: FireStoreService
+
   ) {
     this.registrarUsuario = this.fb.group({
       email: ['', Validators.required],
@@ -49,7 +51,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       Email: this.registrarUsuario.value.email,
       password: this.registrarUsuario.value.password,
       repetirPassword: this.registrarUsuario.value.repetirPassword,
-      videojuegoFav:this.registrarUsuario.value.videojuegofav,
+      videojuegoFav: this.registrarUsuario.value.videojuegoFav,
       uid: "",
       perfil: "Visitante",
       urlfotoperfil: this.registrarUsuario.value.urlfotoperfil
@@ -61,7 +63,26 @@ export class RegistrarUsuarioComponent implements OnInit {
       console.log("error");
     })
     if (res && res.user) {
-      // Accede a la propiedad user del objeto res
+      if(res){
+        console.log("exito al crear el usuario")
+        const path = 'Usuarios';
+        const id = res.user.uid;
+        Datos.uid = id
+        Datos.password = ""
+        Datos.repetirPassword = ""
+
+        await this.firestore.CreateDoc(Datos, path, id )
+        Swal.fire({
+          imageUrl: 'https://i.pinimg.com/originals/93/f8/9b/93f89b965b719a175e2ac7de6c3e8b54.gif',
+          title: 'Welcome!',
+          text: '¡Bienvenido a RetroGames!',
+        });
+        this.router.navigate(['/login']);
+      }
+
+    
+
+
       console.log(res.user);
     } else {
       // El objeto res está vacío o nulo

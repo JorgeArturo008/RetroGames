@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { error } from 'console';
+import { Console, error } from 'console';
+import { AuthServicesService } from 'src/app/Services/auth-services.service';
 import { FirebaseErrorCodeService } from 'src/app/Services/firebase-error-code.service';
 import Swal from 'sweetalert2';
 
@@ -18,15 +19,33 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private afAuth: AngularFireAuth,
     private router: Router,
-    private firebaseError: FirebaseErrorCodeService
+    private firebaseError: FirebaseErrorCodeService,
+    private auth : AuthServicesService
   ) {
     this.loginusuario = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
+
+
+    this.auth.stateUser().subscribe(res => {
+      if(res){
+       
+      }else{
+        
+      }
+    })
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
+
+
+  stateUser(){
+    this.auth.stateUser();
+  }
 
   login() {
     const email = this.loginusuario.value.email;
