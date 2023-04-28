@@ -6,6 +6,7 @@ import 'firebase/compat/auth';
 import { userInfo } from 'os';
 import { AuthServicesService } from 'src/app/Services/auth-services.service';
 import { doc, getDoc, getFirestore } from '@angular/fire/firestore';
+import { ModeloPerfil } from '../../Models/ModelUser';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class InformacionComponent implements OnInit {
      }
 
       UID : string = "";
-      
+      ListUser: ModeloPerfil[] = [] ;
 
   ngOnInit(): void {
     
@@ -38,7 +39,22 @@ export class InformacionComponent implements OnInit {
       try {
         const docSnap = await getDoc(docRef);
         if(docSnap.exists()) {
-            console.log(docSnap.data());
+          const data: Record<string, any> = docSnap.data();
+          const userProfile = new ModeloPerfil(
+            data['Nombre'],
+            data['Edad'],
+            data['Telefono'],
+            data['Email'],
+            data['password'],
+            data['repetirPassword'],
+            data['videojuegoFav'],
+            data['uid'],
+            data['perfil'],
+            data['urlfotoperfil']
+          );
+            this.ListUser.push(userProfile);
+          
+          console.log(this.ListUser);
         } else {
             console.log("Document does not exist")
         }
@@ -47,6 +63,8 @@ export class InformacionComponent implements OnInit {
         console.log(error)
     }
     }
+
+    
 
   getusers(){
 

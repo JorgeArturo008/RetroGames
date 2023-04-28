@@ -1,6 +1,7 @@
 <nav class="navRetro">
-
-    <img class="iconGif" src="https://66.media.tumblr.com/dcac66d94aa91c9706a3166c7944dcd5/tumblr_mm31jswkAI1rfjowdo1_640.gif">
+    <a class="iconGif" routerLink="/informacion">
+        <img src="https://66.media.tumblr.com/dcac66d94aa91c9706a3166c7944dcd5/tumblr_mm31jswkAI1rfjowdo1_640.gif">
+    </a>
     <h1 class="textnav">RetroGames</h1>
 
 
@@ -24,11 +25,12 @@
                 </a>
             </li>
             <li>
-                <a class="a2" routerLink="/">
+                <a class="a2" routerLink="/informacion">
                     <i class="fas"></i>
-                    <span>New VideoGames</span>
+                    <span> <ion-icon ios="ios-locate" md="md-locate"></ion-icon>Perfil</span>
                 </a>
             </li>
+
             <li>
                 <a class="a2" routerLink="/lista-video-juegos">
                     <i class="fas"></i>
@@ -38,15 +40,10 @@
             <li>
                 <a class="a2" href="">
                     <i class="fas"></i>
-                    <span> <ion-icon ios="ios-locate" md="md-locate"></ion-icon>GoogleMaps</span>
+                    <span> <ion-icon ios="ios-locate" md="md-locate"></ion-icon>Sobre Nosotros</span>
                 </a>
             </li>
-            <li>
-                <a class="a2" routerLink="/informacion">
-                    <i class="fas"></i>
-                    <span> <ion-icon ios="ios-locate" md="md-locate"></ion-icon>Perfil</span>
-                </a>
-            </li>
+
             <li>
                 <a class="a2" (click)="logout()" routerLink="/login">
                     <i class="fas"></i>

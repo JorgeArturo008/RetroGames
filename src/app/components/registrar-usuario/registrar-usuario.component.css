@@ -11,6 +11,12 @@
     background-size: cover;
 }
 
+.title {
+    color: aliceblue;
+    font-size: 45px;
+    margin-left: 20%;
+}
+
 .logInbk {
     background: transparent;
     backdrop-filter: blur(10px);
@@ -35,7 +41,7 @@
 .logIninitialpg {
     background: transparent;
     backdrop-filter: blur(10px);
-    height: 75%;
+    height: 79%;
     width: 65%;
     border-radius: 15px;
     border-color: aliceblue;
@@ -44,21 +50,29 @@
 }
 
 .textlog {
+    height: 75%;
+    width: 25%;
+    margin-left: 5%;
     color: white;
-    margin-top: 3%;
-    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.textlog1 {
+    margin-top: 60px;
+    height: 100%;
+    width: 25%;
+    color: white;
+    margin-left: 35%;
     align-items: center;
     justify-content: center;
 }
 
 .textLink {
     color: white;
-    float: right;
-    margin-right: 10%;
 }
 
 .icontext {
     color: white;
-    float: left;
-    margin-top: 5%;
 }
