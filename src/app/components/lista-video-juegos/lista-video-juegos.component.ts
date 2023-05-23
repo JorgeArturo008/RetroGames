@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GamesService } from 'src/app/Services/games.service';
 import { VideoJuego } from '../../Models/VideoJuego';
 import Swal from 'sweetalert2';
+import { StateUserService } from 'src/app/Services/state-user.service';
 
 @Component({
   selector: 'app-lista-video-juegos',
@@ -11,16 +12,25 @@ import Swal from 'sweetalert2';
 export class ListaVideoJuegosComponent implements OnInit {
 
   ListGames: VideoJuego[] = [];
+  statePerfil = '';
+  loading : boolean = false;
 
-  constructor(private _gamesService: GamesService) { }
+  constructor(private _gamesService: GamesService,
+    private State: StateUserService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    this.loading = true;
+    await this.obtenerStatePerfil()
     this.obtenerjuegos();
+  }
+
+  async obtenerStatePerfil() {
+    this.statePerfil = await this.State.getdoc();
+    this.loading = false;
   }
 
   obtenerjuegos(){
     this._gamesService.getGames().subscribe(data => {
-console.log(data);
 this.ListGames = data;
     }, error => {
      console.log(error); 

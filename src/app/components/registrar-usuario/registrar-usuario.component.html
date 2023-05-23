@@ -56,10 +56,20 @@
                     <input type="text" formControlName="videojuegoFav" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">URLPerfil</label>
-                    <input type="text" formControlName="urlfotoperfil" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+
+                <label for="exampleInputPassword1" class="form-label">Escoje un Avatar para tu Foto de Usuario</label>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Avatar</label>
+                    <select class="form-select" formControlName="urlfotoperfil" id="inputGroupSelect01">                      
+                          <option value="https://e7.pngegg.com/pngimages/739/902/png-clipart-super-mario-illustration-super-mario-bros-nintendo-badge-arcade-super-mario-rpg-luigi-super-mario-bros-nintendo.png">Mario</option>
+                          <option value="https://external-preview.redd.it/sxlSzCfs7YffSIWiXhp41UkE7ku-3op6iEPJyS3CT-g.jpg?auto=webp&s=a7bfef2318059a67b4e1e5acf92e83a281bf2e5b">Link</option>
+                          <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJaLfq-6HhMV90ZkS-nTUBDoIQLYUg5h00Rw&usqp=CAU">Sonic</option>
+                        </select>
                 </div>
+
+
+
+
 
                 <a routerLink="/login" style="color: aliceblue;  ">
                     <ion-icon ios="ios-arrow-back" md="md-arrow-back" class="icontext"></ion-icon>Atras</a>

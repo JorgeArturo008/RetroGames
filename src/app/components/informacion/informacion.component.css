@@ -23,3 +23,91 @@
     overflow: hidden;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 45);
 }
+
+.imgdetalle {
+    margin-top: 100px;
+    margin-left: 135px;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+}
+
+.divleft {
+    vertical-align: top;
+    display: inline-block;
+    width: 42.5%;
+    height: 100%;
+}
+
+.divinfo0 {
+    backdrop-filter: blur(15px);
+    margin-top: 40px;
+    margin-right: 115px;
+    float: right;
+    width: 77%;
+    height: 90%;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.divright {
+    vertical-align: top;
+    display: inline-block;
+    width: 57.5%;
+    height: 100%;
+}
+
+.Titulodetalle {
+    font-size: 50px;
+    font-family: Georgia, serif;
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.Descripciondetalle {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: aliceblue;
+}
+
+.divtitulo {
+    margin-top: 50px;
+    margin-right: 50px;
+    float: right;
+    width: 85%;
+    height: 13%;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.divDescripcion {
+    margin-left: 70px;
+    margin-top: 160px;
+    width: 82%;
+    height: 70%;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.infoFormat {
+    font-size: 25px;
+    margin-left: 70px;
+}
+
+.infoFormat1 {
+    font-size: 30px;
+    margin-left: 70px;
+}
+
+.imgMemory {
+    margin-left: 72px;
+    margin-top: 20px;
+    width: 450px;
+    height: 100px;
+}

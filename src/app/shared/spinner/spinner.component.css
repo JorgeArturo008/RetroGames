@@ -1,0 +1,12 @@
+.Loading {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    height: 20vh;
+    right: 0px;
+    top: 0px;
+    width: 80vh;
+    justify-content: center;
+    border-radius: 25px;
+    margin-left: 15%;
+    margin-top: 15%;
+}

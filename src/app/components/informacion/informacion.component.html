@@ -1,13 +1,35 @@
 <div class="background1">
 
     <app-dashboard></app-dashboard>
-    <div class="InitialPag ">
+    <div class="InitialPag " *ngFor="let user of ListUser">
 
-
-        <div *ngFor="let user of ListUser">
-            <h2 style="color: aliceblue;">{{user.Nombre}}</h2>
+        <div class="divleft">
+            <div>
+                <img src="{{user.urlfotoperfil}}" class="imgdetalle">
+            </div>
         </div>
+        <div class="divright">
+            <div class="divinfo0">
+                <div class="divtitulo">
+                    <p class="Titulodetalle">{{user.Nombre}}</p>
+                </div>
+                <div class="divDescripcion">
+                    <img src="https://64.media.tumblr.com/ae1c20edb931e1ee6b5478679ebd228a/41b38c2d4ec702db-1c/s540x810/2dee3abf2791c35679af35efacaaf0a3990c58fb.gif" class="imgMemory">
+                    <h2 class="infoFormat1" style="color: aliceblue;">Datos personales:</h2>
+                    <span class="infoFormat" style="color: aliceblue;">Perfil: {{user.perfil}}</span><span class="infoFormat" style="color: aliceblue;">Usuario: {{user.Nombre}}</span>
 
+                    <h3 class="infoFormat" style="color: aliceblue;">Correo Electronico: {{user.Email}}</h3>
+                    <h3 class="infoFormat" style="color: aliceblue;">Edad: {{user.Edad}}</h3>
+                    <h3 class="infoFormat" style="color: aliceblue;">Numero de Telefono: {{user.Telefono}}</h3>
+                    <h3 class="infoFormat" style="color: aliceblue;">VideoJuego Favorito: {{user.videojuegoFav}}</h3>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
 
 
     </div>

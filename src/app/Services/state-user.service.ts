@@ -1,39 +1,29 @@
+import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/compat';
-import { UserModel } from 'src/app/Models/ModelUser';
+import { ModeloPerfil, UserModel } from 'src/app/Models/ModelUser';
 import { FireStoreService } from 'src/app/Services/fire-store.service';
 import 'firebase/compat/auth';
 import { userInfo } from 'os';
 import { AuthServicesService } from 'src/app/Services/auth-services.service';
 import { doc, getDoc, getFirestore } from '@angular/fire/firestore';
-import { ModeloPerfil } from '../../Models/ModelUser';
-import { StateUserService } from '../../Services/state-user.service';
 
-@Component({
-  selector: 'app-informacion',
-  templateUrl: './informacion.component.html',
-  styleUrls: ['./informacion.component.css'],
+@Injectable({
+  providedIn: 'root',
 })
-export class InformacionComponent implements OnInit {
+export class StateUserService {
   constructor(
     private database: FireStoreService,
-    private auth: AuthServicesService,
-    private State: StateUserService
+    private auth: AuthServicesService
   ) {}
+
+  // Basicamente Este es un Servicio que nos ayuda a obtener el rol del perfil del usuario
 
   statePerfil = '';
   UID: string = '';
   ListUser: ModeloPerfil[] = [];
 
-  ngOnInit(): void {
-    this.getdoc();
-  }
-
-  async obtenerStatePerfil() {
-    this.statePerfil = await this.State.getdoc();
-  }
-
-  async getdoc() {
+  async getdoc(): Promise<string> {
     await this.obtenerUid();
     const db = getFirestore();
     const docRef = doc(db, 'Usuarios', this.UID);
@@ -55,30 +45,37 @@ export class InformacionComponent implements OnInit {
           data['urlfotoperfil']
         );
         this.ListUser.push(userProfile);
-        
-        
 
+        //Obtenemos el Perfil del usuario
+        this.ListUser.forEach((usuario) => {
+          if (usuario.perfil === 'Visitante') {
+            this.statePerfil = usuario.perfil;
+            console.log(this.statePerfil);
+          }else{
+            this.statePerfil = usuario.perfil;
+            console.log(this.statePerfil);
+          }
+        });
       } else {
         console.log('Document does not exist');
       }
     } catch (error) {
       console.log(error);
     }
-  }
 
-  getusers() {
-    this.database.getcollection<UserModel>('Usuarios').subscribe((res) => {
-      console.log(res);
-    });
+    return this.statePerfil;
   }
 
   async obtenerUid() {
     try {
       const uid = await this.auth.getuid();
       this.UID = uid;
-      console.log(this.UID);
     } catch (error) {
       console.log(error);
     }
+  }
+
+  getStatePerfil(): string {
+    return this.statePerfil;
   }
 }

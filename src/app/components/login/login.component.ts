@@ -58,12 +58,9 @@ export class LoginComponent implements OnInit {
         Swal.fire({
           icon: 'success',
           title: 'Ingresaste con Exito',
-          text: "hey",
-          footer: '<a href="">Porque esta sucediendo este error?</a>',
+          text: 'Hola Nuevamente ' + email,
           backdrop: false
         });
-
-        console.log(user.user?.email) 
 
         this.router.navigate(['/home']);})
       .catch((error) => {

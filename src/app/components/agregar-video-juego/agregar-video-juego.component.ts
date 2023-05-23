@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { GamesService } from 'src/app/Services/games.service';
 import { error } from 'console';
+import { StateUserService } from 'src/app/Services/state-user.service';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class AgregarVideoJuegoComponent implements OnInit {
   boton = 'Agregar VideoJuego'
   titulo = 'Agreguemos un Nuevo Video Juego!';
   id : string;
+  statePerfil = '';
 
   videogameForm: FormGroup;
 
@@ -23,6 +25,7 @@ export class AgregarVideoJuegoComponent implements OnInit {
      private Router: Router,
      private _gamesService: GamesService,
      private aRouter: ActivatedRoute,
+     private State: StateUserService
     ) {
       this.videogameForm = this.fb.group({
         Nombre:['',Validators.required],
@@ -40,6 +43,13 @@ export class AgregarVideoJuegoComponent implements OnInit {
 
   ngOnInit(): void {
     this.editargame();
+    this.obtenerStatePerfil()
+    console.log(this.State)
+  }
+
+  
+  async obtenerStatePerfil() {
+    this.statePerfil = await this.State.getdoc();
   }
 
   agregarvideogame(){

@@ -1,8 +1,12 @@
 <div class="background1">
 
+
+
     <app-dashboard></app-dashboard>
 
+
     <div class="InitialPag">
+
 
         <div class="container mt-5 ">
             <div style="text-align: center;">
@@ -15,6 +19,9 @@
                 <button routerLink="/lista-video-juego-vertical" class="btn btn-success float-end" id="CHANGE" style="margin-right: 5px;"><ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button>
 
             </div>
+
+            <app-spinner *ngIf="loading == true" style="justify-content: center; align-items: center; "></app-spinner>
+
             <div class="row" style="margin-top: 20px;">
 
                 <div class="card-body text-center ">
@@ -28,7 +35,8 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ games.Nombre }}</h5>
                                     <p class="card-text">{{ games.productora }}</p>
-                                    <span><a [routerLink]="['/detalle', games._id ]" style="float: inline-start;" class="btn btn-success">Ver</a> <button [routerLink]="['/editar-video-juego', games._id ]" class="btn btn-primary" style=" margin-left: 85px;"><ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button> <button (click)="DeleteGame(games._id)" class="btn btn-danger" style="float: inline-end;"><ion-icon ios="ios-trash" md="md-trash"></ion-icon></button></span>
+                                    <span><a [routerLink]="['/detalle', games._id ]" class="btn btn-success">Ver</a> <button *ngIf="statePerfil == 'Administrador'" [routerLink]="['/editar-video-juego', games._id ]" class="btn btn-primary" style=" margin-left: 85px;"><ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button> <button *ngIf="statePerfil == 'Administrador'" (click)="DeleteGame(games._id)" class="btn btn-danger" style="float: inline-end;"><ion-icon ios="ios-trash" md="md-trash"></ion-icon></button></span>
+
 
                                 </div>
                             </div>
