@@ -109,3 +109,17 @@
     margin-top: 20px;
     border-color: aliceblue;
 }
+
+.btnDescarga {
+    font-size: 20px;
+    color: aliceblue;
+    background-color: green;
+    border-radius: 15px;
+    border-color: aliceblue;
+    border-width: 1px;
+    width: 50%;
+    height: 20%;
+    margin-top: 5%;
+    margin-left: 24%;
+    text-align: center;
+}

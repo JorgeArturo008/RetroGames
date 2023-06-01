@@ -32,8 +32,9 @@ export class AgregarVideoJuegoComponent implements OnInit {
         Url:['',Validators.required],
         Descrpcion:['',Validators.required],
         year:['',Validators.required],
-        productora:['',Validators.required]
-      
+        productora:['',Validators.required],
+        UrlDescarga:['',Validators.required]
+
       })
 
       this.id = this.aRouter.snapshot.paramMap.get('id')!;
@@ -60,7 +61,8 @@ export class AgregarVideoJuegoComponent implements OnInit {
       Url: this.videogameForm.get('Url')?.value,
       Descripcion: this.videogameForm.get('Descrpcion')?.value,
       year: this.videogameForm.get('year')?.value,
-      productora: this.videogameForm.get('productora')?.value
+      productora: this.videogameForm.get('productora')?.value,
+      UrlDescarga: this.videogameForm.get('UrlDescarga')?.value
     }
     
     if(this.id !== null){
@@ -110,7 +112,8 @@ export class AgregarVideoJuegoComponent implements OnInit {
         Url: data.Url,
         Descrpcion: data.Descripcion,
         year: data.year,
-        productora: data.productora
+        productora: data.productora,
+        UrlDescarga: data.UrlDescarga
         })
       })
     }

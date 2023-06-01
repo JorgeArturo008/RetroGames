@@ -18,14 +18,7 @@ export class HomeComponent implements OnInit {
 
     ) {
       
-    this.auth.stateUser().subscribe(res => {
-      if(res){
-        
-      }else{
-        
-        this.router.navigate(['/login']);
-      }
-    })
+    
    }
 
    

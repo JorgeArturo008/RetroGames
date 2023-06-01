@@ -56,8 +56,6 @@ export class InformacionComponent implements OnInit {
         );
         this.ListUser.push(userProfile);
         
-        
-
       } else {
         console.log('Document does not exist');
       }
@@ -76,7 +74,6 @@ export class InformacionComponent implements OnInit {
     try {
       const uid = await this.auth.getuid();
       this.UID = uid;
-      console.log(this.UID);
     } catch (error) {
       console.log(error);
     }
